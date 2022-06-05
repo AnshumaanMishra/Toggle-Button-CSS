@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggle-2{
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 0.8rem;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 15px 0 0;
+        }
+        
+            /* Hiding the box of the checkbox */
+            .toggle-2__input{
+                display: none;
+            }
+            
+            /* Styling the button */
+            .toggle-2__button{
+                position: relative;
+                display: inline-block;
+                line-height: 20px;
+                text-transform: uppercase;
+                background-color: #fff;
+                color:#aaa;
+                border: solid 1px #ccc;
+                padding: 5px 10px 5px 30px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            
+            /* Creating the circle(Just styling, not necessary) */
+            .toggle-2__button::before{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-color: #ccc;
+                content: "";
+                transition: all 0.3s ease;
+                border-radius: 100%;
+            }
+        
+            /* Styling CHECKED or ON conditiom */
+            .toggle-2__input:checked + .toggle-2__button{
+                background-color: #00b3b4;
+                border-color: #00b3b4;
+                color: white;
+            }
+        
+            .toggle-2__input:checked + .toggle-2__button::before{
+                background-color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <h2>Active-Highlighted Toggle Button</h2>
+    <label for="toggle2" class="toggle-2">
+        <input type="checkbox" id="toggle2" class="toggle-2__input" />
+        <span class="toggle-2__button">Click me to activate</span>
+    </label>
+</body>
+</html>
