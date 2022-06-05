@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .toggle-1{
+        .toggle{
             font-family: Helvetica, Arial, sans-serif;
             display: inline-block;
             vertical-align: top;
             margin: 0 15px 0 0;
         }
             /* Hiding the box of the checkbox */
-            .toggle-1__input{
+            .toggle__input{
                 display: none;
             }
             
             /* Styling the button  */
-            .toggle-1__button{
+            .toggle__button{
                 position: relative;
                 display: inline-block;
                 font-size: 1rem;
@@ -33,7 +33,7 @@
             }
             
             /* Creating ON/OFF box */
-            .toggle-1__button::before{
+            .toggle__button::before{
                 position: absolute;
                 top: 5px;
                 left: 38px;
@@ -49,12 +49,12 @@
             
             /* Styling ON condition */
             /* No need to style OFF condition since it is pre-defined as default */
-            .toggle-1__input:checked + .toggle-1__button{
+            .toggle__input:checked + .toggle__button{
                 background-color: #00b3b4;
                 border: solid 1px #00b3b4;
             }
         
-            .toggle-1__input:checked + .toggle-1__button::before{
+            .toggle__input:checked + .toggle__button::before{
                 left: 5px;
                 text-align: center;
                 content: "ON";
@@ -65,9 +65,9 @@
 </head>
 <body>
     <h2>Switch-Style Toggle Button</h2>
-    <label for="toggle1" class="toggle-1">
-        <input type="checkbox" id="toggle1" class="toggle-1__input" />
-        <span class="toggle-1__button"></span>
+    <label for="toggle1" class="toggle">
+        <input type="checkbox" id="toggle1" class="toggle__input" />
+        <span class="toggle__button"></span>
     </label>
 </body>
 </html>
