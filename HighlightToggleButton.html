@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .toggle-2{
+        .toggle{
             font-family: Helvetica, Arial, sans-serif;
             font-size: 0.8rem;
             display: inline-block;
@@ -15,12 +15,12 @@
         }
         
             /* Hiding the box of the checkbox */
-            .toggle-2__input{
+            .toggle__input{
                 display: none;
             }
             
             /* Styling the button */
-            .toggle-2__button{
+            .toggle__button{
                 position: relative;
                 display: inline-block;
                 line-height: 20px;
@@ -34,7 +34,7 @@
             }
             
             /* Creating the circle(Just styling, not necessary) */
-            .toggle-2__button::before{
+            .toggle__button::before{
                 position: absolute;
                 top: 10px;
                 left: 10px;
@@ -48,22 +48,22 @@
             }
         
             /* Styling CHECKED or ON conditiom */
-            .toggle-2__input:checked + .toggle-2__button{
+            .toggle__input:checked + .toggle__button{
                 background-color: #00b3b4;
                 border-color: #00b3b4;
                 color: white;
             }
         
-            .toggle-2__input:checked + .toggle-2__button::before{
+            .toggle__input:checked + .toggle__button::before{
                 background-color: #fff;
             }
     </style>
 </head>
 <body>
     <h2>Active-Highlighted Toggle Button</h2>
-    <label for="toggle2" class="toggle-2">
-        <input type="checkbox" id="toggle2" class="toggle-2__input" />
-        <span class="toggle-2__button">Click me to activate</span>
+    <label for="toggle2" class="toggle">
+        <input type="checkbox" id="toggle2" class="toggle__input" />
+        <span class="toggle__button">Click me to activate</span>
     </label>
 </body>
 </html>
